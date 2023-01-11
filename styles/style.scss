@@ -633,6 +633,10 @@ nav img{
                 max-width: 428px;
                 max-width: 392px;
             }
+    .new_product_size-3 {
+        width: 25%;
+        display: flex;
+        justify-content: start;
     }
     
 }
@@ -820,6 +824,11 @@ nav img{
 .contact-flex {
     width: 100%;
     padding: 0 20%;
+
+    @media(max-width: 768px) {
+        width: 100%;
+        padding: 0 12%;
+    }
 }
 
 .contact-title {
@@ -839,6 +848,8 @@ nav img{
     img {
         width: 100%;
         height: 100%;
+        max-width: 864px;
+        max-height: 517px;
     }
 }
 .contact-text {
@@ -861,4 +872,5 @@ nav img{
         width: 100%;
         height: 100%;
     }
+}
 }
