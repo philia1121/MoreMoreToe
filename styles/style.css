@@ -208,6 +208,19 @@ nav img {
   top: 60px;
 }
 
+#toTop {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 5;
+  background-image: url(/imgs/upArrowFill.png);
+  background-size: contain;
+  border: none;
+  background-color: transparent;
+}
+
 .introduce {
   background-image: url(../imgs/121708_2.jpg);
   background-size: cover;
@@ -858,6 +871,16 @@ nav img {
   max-width: 392px;
 }
 
+.new_product .new_product_size-3 {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
 .block {
   width: auto;
   height: 60px;
@@ -1126,6 +1149,13 @@ nav img {
   padding: 0 20%;
 }
 
+@media (max-width: 768px) {
+  .contact-flex {
+    width: 100%;
+    padding: 0 12%;
+  }
+}
+
 .contact-title {
   text-align: center;
   font-family: ‘微軟正黑體’, sans-serif;
@@ -1151,6 +1181,8 @@ nav img {
 .contact-image-1 img {
   width: 100%;
   height: 100%;
+  max-width: 864px;
+  max-height: 517px;
 }
 
 .contact-text {

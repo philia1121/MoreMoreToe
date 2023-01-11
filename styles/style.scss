@@ -71,6 +71,10 @@ nav img{
     transform: rotateX(180deg);
 }
 
+// .navButton{
+
+// }
+
 @media only screen and (max-width: 1170px) {
   nav >ul>li >a{padding:35px 15px}
 }
@@ -121,6 +125,19 @@ nav img{
 .pageDrop{
     position: relative;
     top: 60px;
+}
+
+#toTop{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 5;
+    background-image: url(/imgs/upArrowFill.png);
+    background-size: contain;
+    border: none;
+    background-color: transparent;
 }
 
 .introduce {
@@ -584,24 +601,24 @@ nav img{
             display: flex;
             justify-content: end;
         }
-            img {
-                width: 100%;
-                height: 100%;
-                max-width: 428px;
-                max-width: 392px;
-            }
+        img {
+            width: 100%;
+            height: 100%;
+            max-width: 428px;
+            max-width: 392px;
+        }
         
         @media(min-width: 1920px) {
             width: 34%;
             display: flex;
             justify-content: end;
         }
-            img {
-                width: 100%;
-                height: 100%;
-                max-width: 428px;
-                max-width: 392px;
-            }
+        img {
+            width: 100%;
+            height: 100%;
+            max-width: 428px;
+            max-width: 392px;
+        }
     }
 
     .new_product_size-2 {
@@ -633,6 +650,7 @@ nav img{
                 max-width: 428px;
                 max-width: 392px;
             }
+    }
     .new_product_size-3 {
         width: 25%;
         display: flex;
@@ -872,5 +890,4 @@ nav img{
         width: 100%;
         height: 100%;
     }
-}
 }
