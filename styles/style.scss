@@ -778,3 +778,48 @@ nav li li{
 
     }
 }
+.contact-flex {
+    width: 100%;
+    padding: 0 20%;
+}
+
+.contact-title {
+    text-align: center;
+    font-family: ‘微軟正黑體’, sans-serif;
+    font-size: 20px;
+    color: #626262;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    padding: 30px 0;
+}
+.contact-image-1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: auto;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+.contact-text {
+    text-align: center;
+    font-family: ‘微軟正黑體’, sans-serif;
+    font-size: 16px;
+    color: #626262;
+    font-weight: 700;
+    p {
+        margin: 30px 0;
+    }
+}
+.contact-logo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: auto;
+    padding: 30px 0;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
