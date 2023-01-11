@@ -19,80 +19,60 @@
 
     <script src="js/jquery.js"></script>
     <script type="module" src="js/script.js"></script>
-    <title>聯絡我們-墨墨頭 moremoretoe</title>
+    <title>關於我們-墨墨頭 moremoretoe</title>
 </head>
 
 <body>
-    <div id="header">
-        <div class="logo">
-          <a href="#">
-            <img src="imgs/tumblr_f6b249e9132439451c28adca4bc06ab7_e718c288_2048_b 1.png" alt="more more toe">
-          </a>
-        </div>  
-        <nav>
-          <ul>
-            <li>
-              <a href="">全部商品</a>
-              <ul class="dropdown">
-                <li><a href="#">所有商品</a></li>
-                <li><a href="#">包包提袋</a></li>
-                <li><a href="#">配件飾品</a></li>
-                <li><a href="#">衣著良品</a></li>
-                <li><a href="#">居家生活</a></li>
-              </ul>        
-            </li>
-            <li>
-                <img src="imgs/Vector 1.png" alt="">     
-            </li>
-            <li>
-              <a href="">最新消息</a>
-              <li>
-                <img src="imgs/Vector 1.png" alt="">     
-            </li>       
-            </li>
-            <li>
-              <a href="">聯絡我們</a>
-            </li>
-            <li>
-                <img src="imgs/Vector 1.png" alt="">     
-            </li>
-            <li>
-              <a href="">關於我們</a>
-            </li>
-            <li>
-                <img src="imgs/Vector 1.png" alt="">     
-            </li>
-          </ul>
-        </nav>
-      </div>
-
-      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="imgs/280716061_5169766969757988_6468044692745594305_n.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="imgs/272839892_4861279900606698_721373256364339594_n.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="imgs/tumblr_e84f0cd8c2dec88e295d6fb0aabf3a95_36566eba_2048.jpg" class="d-block w-100" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-
+  <div id="header">
+    <div class="logo">
+      <a href="#">
+        <img src="imgs/tumblr_f6b249e9132439451c28adca4bc06ab7_e718c288_2048_b 1.png" alt="more more toe">
+      </a>
+    </div>  
+    <nav>
+      <ul class="navText">
+        <li id="Products">
+            <a>全部商品</a> 
+            <img id="productArrow" src="imgs/Vector 1.png" alt="">       
+        </li>
+        <div class="dropdown ddHide">
+          <a href="#">所有商品</a>
+          <div class="dropdownDeco"></div>
+          <a href="#">包包提袋</a>
+          <div class="dropdownDeco"></div>
+          <a href="#">配件飾品</a>
+          <div class="dropdownDeco"></div>
+          <a href="#">衣著良品</a>
+          <div class="dropdownDeco"></div>
+          <a href="#">居家生活</a>
+        </div> 
+        <li id="News">
+            <a href="">最新消息</a>
+            <img src="imgs/Vector 1.png" alt="">           
+        </li>
+        <li id="Contact">
+            <a href="">聯絡我們</a>
+            <img src="imgs/Vector 1.png" alt="">     
+        </li>
+        <li id="About">
+            <a href="">關於我們</a>
+            <img src="imgs/Vector 1.png" alt="">     
+        </li>
+      </ul>
+      <ul class="navButton">
+        <li id="Cart">
+          <img src="/imgs/hamburgerIcon.png" alt="cart">
+        </li>
+        <li id="Cart">
+          <img src="/imgs/🦆 icon _shopping cart_.png" alt="cart">
+        </li>
+        <li id="Search">
+          <img src="/imgs/🦆 icon _search_.png" alt="search">
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="pageContainer">
       <div class="introduce contact-flex">
         <div class="contact-logo">
             <a href="#"><img src="imgs/tumblr_f6b249e9132439451c28adca4bc06ab7_e718c288_2048_b.png" alt="more more toe"></a>
@@ -181,6 +161,7 @@
         </div>
         <div class="copyrite"><p>copyright © 2022 more moe toe</p></div>
       </footer>
+  </div>
       
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>

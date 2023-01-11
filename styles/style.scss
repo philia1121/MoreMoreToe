@@ -31,6 +31,7 @@ a {
     display:block;
     padding:0 0 0 20px;
 }
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -71,15 +72,25 @@ nav img{
     transform: rotateX(180deg);
 }
 
-// .navButton{
+.navButton{
+    display: flex;
+    width: 150px;
 
-// }
+    img{
+        width: 20px;
+        height: 20px;
+    }
+
+    @media (max-width: 1024px) {
+        width: 135px;
+    }
+}
 
 @media only screen and (max-width: 1170px) {
   nav >ul>li >a{padding:35px 15px}
 }
 @media only screen and (min-width: 960px) {
-  nav{display:block!important}
+//   nav{display:block!important}
 }
 @media only screen and (max-width: 959px) {
   nav{display:none;width:100%;clear:both;float:none;max-height:400px;overflow-y:scroll}
