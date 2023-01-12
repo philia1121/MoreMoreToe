@@ -31,6 +31,11 @@ $("#Products").click( function(){
     console.log("clicked");
 });
 
+$("#Menu").click( function(){
+    $(".navText").toggleClass("ntShow");
+    console.log("clicked");
+});
+
 $("#toTop").click( function(){
     window.scrollTo(0, 0);
 });

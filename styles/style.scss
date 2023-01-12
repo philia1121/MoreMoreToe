@@ -21,7 +21,13 @@ a {
     justify-content: space-between;
     padding : 0 72px 0 72px;
     width:100%;
-    position:relative;
+    position:fixed;
+    z-index: 3;
+    background-image: url(/imgs/Group33_1.png);
+
+    @media (max-width: 1024px){
+        padding: 0 15px;
+    }
 }
 .logo {
     padding:8px 0 8px;
@@ -29,7 +35,7 @@ a {
 .logo a {
     font-size:28px;
     display:block;
-    padding:0 0 0 20px;
+    padding: 0;
 }
 
 nav {
@@ -49,7 +55,7 @@ nav li {
     cursor: pointer;
 }
 nav li a {
-    padding:35px 10px 35px 35px;
+    padding:0 10px 0 35px;
 }
 nav li a:hover {
     font-weight: 700;
@@ -66,42 +72,68 @@ nav li li{
 }
 
 nav img{
+    //for arrow
     transition-duration: .2s;
+    width: 15px;
+    height: auto;
 }
+
 .imgflip{
     transform: rotateX(180deg);
 }
 
-.navButton{
+.navText {
+    @media (max-width: 1024px){
+        background-color: #fff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 0;
+        color: #5e5e5e;
+        flex-direction: column;
+        align-items: flex-start;
+        display: none;
+        a{
+            color: #5e5e5e;
+        }
+        li{
+            width: 100%;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+    }
+}
+.navContent{
+    width: 100%;
+    padding: 15px 0;
+}
+
+.ntShow{
     display: flex;
-    width: 150px;
+}
+.navButton {
+    display: flex;
+    width: 100px;
 
     img{
         width: 20px;
         height: 20px;
     }
 
-    @media (max-width: 1024px) {
-        width: 135px;
+    #Menu {
+        display: none;
     }
-}
 
-@media only screen and (max-width: 1170px) {
-  nav >ul>li >a{padding:35px 15px}
-}
-@media only screen and (min-width: 960px) {
-//   nav{display:block!important}
-}
-@media only screen and (max-width: 959px) {
-  nav{display:none;width:100%;clear:both;float:none;max-height:400px;overflow-y:scroll}
-  nav{padding:10px}
-  nav ul{float:none}
-  nav li{float:none}
-  nav ul li a{float:none;padding:8px;display:block}
-  #header nav ul ul{display:block;position:static;background:none;border:none;padding:0}
-  #header nav a{color:#fff;padding:8px}
-  #header nav a:hover{font-weight: 500;}
-  #header nav ul li li a:before{content:"- "}
+    @media (max-width: 1024px) {
+        width: 150px;
+        padding: 0 20px;
+
+        #Menu {
+            display: block;
+        }
+    }
 }
 
 .dropdown {
@@ -116,10 +148,19 @@ nav img{
     align-items: center;
     justify-content: center;
     z-index: 1;
+
+    @media (max-width: 1024px){
+        position: relative;
+        top: 0;
+        background-color: #e7e7e7;
+    }
 }
 .dropdown a {
     color: #6b6b6b;
     padding: 0 50px;
+    @media (max-width: 1024px){
+        padding: 0 20px;
+    }
 }
 .dropdown a:hover{
     font-weight: 700;
@@ -131,11 +172,13 @@ nav img{
 }
 .ddHide {
     display: none;
+
 }
 
-.pageDrop{
-    position: relative;
-    top: 60px;
+#Products :hover{
+    .dropdown{
+        display: flex;
+    }
 }
 
 #toTop{
@@ -164,6 +207,15 @@ nav img{
         height: 30px;
         right: 5px;
     }
+}
+
+.pageContainer{
+    position: relative;
+    top: 95px;
+}
+.pageDrop{
+    position: relative;
+    top: 155px;
 }
 
 .introduce {
