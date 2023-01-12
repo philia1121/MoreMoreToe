@@ -4,134 +4,230 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- import bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
     <link rel="stylesheet" href="styles/style.css">
+    <!-- Firebase App is always required and must be first -->
+    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-app-compat.js"></script>
+
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-storage-compat.js"></script>
+
+    <script src="js/jquery.js"></script>
+    <script type="module" src="js/script.js"></script>
+    <link rel="shortcut icon" href="imgs/favicon.ico">
     <title>墨墨頭 moremoretoe</title>
 </head>
 
-<body>
-    <div id="header">
+<body>  
+      <div id="header">
         <div class="logo">
           <a href="#">
             <img src="imgs/tumblr_f6b249e9132439451c28adca4bc06ab7_e718c288_2048_b 1.png" alt="more more toe">
           </a>
         </div>  
         <nav>
-          <ul>
-            <li>
-              <a href="">全部商品</a>
-              <ul class="dropdown">
-                <li><a href="#">所有商品</a></li>
-                <li><a href="#">包包提袋</a></li>
-                <li><a href="#">配件飾品</a></li>
-                <li><a href="#">衣著良品</a></li>
-                <li><a href="#">居家生活</a></li>
-              </ul>        
+          <ul class="navText">
+            <li id="Products">
+                <a>全部商品</a> 
+                <img id="productArrow" src="imgs/Vector 1.png" alt="">       
             </li>
-            <li>
+            <div class="dropdown ddHide">
+              <a href="#">所有商品</a>
+              <div class="dropdownDeco"></div>
+              <a href="#">包包提袋</a>
+              <div class="dropdownDeco"></div>
+              <a href="#">配件飾品</a>
+              <div class="dropdownDeco"></div>
+              <a href="#">衣著良品</a>
+              <div class="dropdownDeco"></div>
+              <a href="#">居家生活</a>
+            </div> 
+            <li id="News">
+                <a href="">最新消息</a>
+                <img src="imgs/Vector 1.png" alt="">           
+            </li>
+            <li id="Contact">
+                <a href="">聯絡我們</a>
                 <img src="imgs/Vector 1.png" alt="">     
             </li>
-            <li>
-              <a href="">最新消息</a>
-              <li>
-                <img src="imgs/Vector 1.png" alt="">     
-            </li>       
-            </li>
-            <li>
-              <a href="">聯絡我們</a>
-            </li>
-            <li>
+            <li id="About">
+                <a href="">關於我們</a>
                 <img src="imgs/Vector 1.png" alt="">     
             </li>
-            <li>
-              <a href="">關於我們</a>
+          </ul>
+          <ul class="navButton">
+            <li id="Cart">
+              <img src="/imgs/hamburgerIcon.png" alt="cart">
             </li>
-            <li>
-                <img src="imgs/Vector 1.png" alt="">     
+            <li id="Cart">
+              <img src="/imgs/🦆 icon _shopping cart_.png" alt="cart">
+            </li>
+            <li id="Search">
+              <img src="/imgs/🦆 icon _search_.png" alt="search">
             </li>
           </ul>
         </nav>
       </div>
-
-      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button id="toTop"></button>
+      <div class="pageContainer">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="imgs/tumblr_e84f0cd8c2dec88e295d6fb0aabf3a95_36566eba_2048.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="imgs/296283314_5369663959768287_5033840091435318650_n.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="imgs/295085835_5354100141324669_8450733336562642663_n.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="imgs/280716061_5169766969757988_6468044692745594305_n.jpg" class="d-block w-100" alt="...">
+        <div class="introduce product-flex">
+          <div class="catalog">
+            <a href="">首頁</a>
+            <div class="catalog-text-padding">/</div>
+            <a href="">全部商品</a>
+            <div>|</div>
+            <a href="">包包提袋</a>
+            <div>|</div>
+            <a href="">飾品配件</a>
+            <div>|</div>
+            <a href="">衣著良品</a>
+            <div>|</div>
+            <a href="">居家生活</a>
           </div>
-          <div class="carousel-item">
-            <img src="imgs/272839892_4861279900606698_721373256364339594_n.jpg" class="d-block w-100" alt="...">
+          <div class="product-amount">顯示1至12項結果</div>
+          <div class="product-all-flex">
+            <div class="product-single-flex">
+              <a href=""><img src="imgs/220x220(3).jpg" alt=""></a>
+              <a href="">防潑水 ! 減壓寬背帶 x 獨家設計 I 一組兩條 ( 可拆卸替換 )</a>
+              <p>NT.999</p>
+            </div>
+            <div class="product-single-flex">
+              <a href=""><img src="imgs/220x220(3).jpg" alt=""></a>
+              <a href="">防潑水 ! 減壓寬背帶 x 獨家設計 I 一組兩條 ( 可拆卸替換 )</a>
+              <p>NT.999</p>
+            </div>
+            <div class="product-single-flex">
+              <a href=""><img src="imgs/220x220(3).jpg" alt=""></a>
+              <a href="">防潑水 ! 減壓寬背帶 x 獨家設計 I 一組兩條 ( 可拆卸替換 )</a>
+              <p>NT.999</p>
+            </div>
+            <div class="product-single-flex">
+              <a href=""><img src="imgs/220x220(3).jpg" alt=""></a>
+              <a href="">防潑水 ! 減壓寬背帶 x 獨家設計 I 一組兩條 ( 可拆卸替換 )</a>
+              <p>NT.999</p>
+            </div>
+            <div class="product-single-flex">
+              <a href=""><img src="imgs/220x220(3).jpg" alt=""></a>
+              <a href="">防潑水 ! 減壓寬背帶 x 獨家設計 I 一組兩條 ( 可拆卸替換 )</a>
+              <p>NT.999</p>
+            </div>
+            <div class="product-single-flex">
+              <a href=""><img src="imgs/220x220(3).jpg" alt=""></a>
+              <a href="">防潑水 ! 減壓寬背帶 x 獨家設計 I 一組兩條 ( 可拆卸替換 )</a>
+              <p>NT.999</p>
+            </div>
+            <div class="product-single-flex">
+              <a href=""><img src="imgs/220x220(3).jpg" alt=""></a>
+              <a href="">防潑水 ! 減壓寬背帶 x 獨家設計 I 一組兩條 ( 可拆卸替換 )</a>
+              <p>NT.999</p>
+            </div>
+            <div class="product-single-flex">
+              <a href=""><img src="imgs/220x220(3).jpg" alt=""></a>
+              <a href="">防潑水 ! 減壓寬背帶 x 獨家設計 I 一組兩條 ( 可拆卸替換 )</a>
+              <p>NT.999</p>
+            </div>
+            <div class="product-single-flex">
+              <a href=""><img src="imgs/220x220(3).jpg" alt=""></a>
+              <a href="">防潑水 ! 減壓寬背帶 x 獨家設計 I 一組兩條 ( 可拆卸替換 )</a>
+              <p>NT.999</p>
+            </div>
+            <div class="product-single-flex">
+              <a href=""><img src="imgs/220x220(3).jpg" alt=""></a>
+              <a href="">防潑水 ! 減壓寬背帶 x 獨家設計 I 一組兩條 ( 可拆卸替換 )</a>
+              <p>NT.999</p>
+            </div>
+            <div class="product-single-flex">
+              <a href=""><img src="imgs/220x220(3).jpg" alt=""></a>
+              <a href="">防潑水 ! 減壓寬背帶 x 獨家設計 I 一組兩條 ( 可拆卸替換 )</a>
+              <p>NT.999</p>
+            </div>
+            <div class="product-single-flex">
+              <a href=""><img src="imgs/220x220(3).jpg" alt=""></a>
+              <a href="">防潑水 ! 減壓寬背帶 x 獨家設計 I 一組兩條 ( 可拆卸替換 )</a>
+              <p>NT.999</p>
+            </div>
           </div>
-          <div class="carousel-item">
-            <img src="imgs/tumblr_e84f0cd8c2dec88e295d6fb0aabf3a95_36566eba_2048.jpg" class="d-block w-100" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-
-      <div class="introduce">
-        
-      <div class="block"></div>
-      </div>
-      <footer>
-        <div class="footerIn">
-            <div class="footerIn-left">
-                <div class="logo">
-                    <a href="#">
-                      <img src="imgs/tumblr_f6b249e9132439451c28adca4bc06ab7_e718c288_2048_b 1.png" alt="more more toe">
-                    </a>
-                </div>
-                <div class="footerIn-left-text"><p>插畫｜設計｜原創｜布包</p></div>
-                <div class="footerIn-left-icon">
-                    <a href="#">
-                        <img src="imgs/🦆 icon _facebook_.png" alt="facebook">
-                      </a>
+        </div> 
+        <footer>
+          <div class="footerIn">
+              <div class="footerIn-left">
+                  <div class="logo">
                       <a href="#">
-                        <img src="imgs/🦆 icon _instagram_ (2).png" alt="instagram">
+                        <img src="imgs/tumblr_f6b249e9132439451c28adca4bc06ab7_e718c288_2048_b 1.png" alt="more more toe">
                       </a>
+                  </div>
+                  <div class="footerIn-left-text"><p>插畫｜設計｜原創｜布包</p></div>
+                  <div class="footerIn-left-icon">
+                      <a href="#">
+                          <img src="imgs/🦆 icon _facebook_.png" alt="facebook">
+                        </a>
+                        <a href="#">
+                          <img src="imgs/🦆 icon _instagram_ (2).png" alt="instagram">
+                        </a>
+                  </div>
+              </div>
+              <div class="footerIn-right-flex">
+                <div class="footerIn-right">
+                    <ul>
+                        <li><a href="">全部商品</a></li>
+                        <li><a href="">最新消息</a></li>
+                        <li><a href="">聯絡我們</a></li>
+                        <li><a href="/about.html">關於我們</a></li>
+                    </ul>
                 </div>
-            </div>
-            <div class="footerIn-right-flex">
-            <div class="footerIn-right">
-                <ul>
-                    <li><a href=""></a>全部商品</li>
-                    <li><a href=""></a>最新消息</li>
-                    <li><a href=""></a>聯絡我們</li>
-                    <li><a href=""></a>關於我們</li>
-                </ul>
-            </div>
-            <div class="footerIn-right">
-                <ul>
-                    <li><a href=""></a>隱私政策</li>
-                    <li><a href=""></a>使用條款</li>
-                    <li><a href=""></a>購買須知</li>
-                    <li><a href=""></a>退換貨款</li>
-                </ul>
-            </div>
-            <div class="footerIn-right">
-                <ul>
-                    <li><a href=""></a>商品說明</li>
-                    <li><a href=""></a>保養方式</li>
-                    <li><a href=""></a>實體通路</li>
-                    <li><a href=""></a>海外運送</li>
-                </ul>
-            </div>
-            </div>
-        </div>
-        <div class="copyrite"><p>copyright © 2022 more moe toe</p></div>
-      </footer>
-      
+                <div class="footerIn-right">
+                    <ul>
+                        <li><a href="">隱私政策</a></li>
+                        <li><a href="">使用條款</a></li>
+                        <li><a href="">購買須知</a></li>
+                        <li><a href="">退換貨款</a></li>
+                    </ul>
+                </div>
+                <div class="footerIn-right">
+                    <ul>
+                        <li><a href="">商品說明</a></li>
+                        <li><a href="">保養方式</a></li>
+                        <li><a href="">實體通路</a></li>
+                        <li><a href="">海外運送</a></li>
+                    </ul>
+                </div>
+                </div>
+          </div>
+          <div class="copyrite"><p>copyright © 2022 more moe toe</p></div>
+        </footer>
+      </div>
 
-  <script src="js/style.js"></script>  
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> 
 </body>
 </html>
