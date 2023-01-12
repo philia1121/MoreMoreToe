@@ -150,6 +150,10 @@ nav img{
     border: none;
     background-color: transparent;
 
+    &:hover {
+		transform: scale(1.1);
+	}
+
     @media(max-width: 768px) {
         width: 40px;
         height: 40px;
@@ -645,6 +649,7 @@ nav img{
     width: auto;
     
     .new_product_size-1 {
+        
         width: 42%;
         display: flex;
         justify-content: end;
@@ -1111,6 +1116,7 @@ nav img{
             font-weight: 600;
             color: #626262;
             text-align: center;
+            padding: 1% 0;
     
             img{
                 width: 100%;
@@ -1134,7 +1140,7 @@ nav img{
         @media(max-width: 768px) {
             width: 25%;
             a {
-                font-size: 12px;
+                font-size: 14px;
             }
         }
     

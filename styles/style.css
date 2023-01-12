@@ -197,6 +197,9 @@ nav img {
   border: none;
   background-color: transparent;
 }
+#toTop:hover {
+  transform: scale(1.1);
+}
 @media (max-width: 768px) {
   #toTop {
     width: 40px;
@@ -1128,6 +1131,7 @@ nav img {
   font-weight: 600;
   color: #626262;
   text-align: center;
+  padding: 1% 0;
 }
 .product-all-flex .product-single-flex a img {
   width: 100%;
@@ -1151,7 +1155,7 @@ nav img {
     width: 25%;
   }
   .product-all-flex .product-single-flex a {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 @media (max-width: 425px) {
