@@ -1205,4 +1205,17 @@ nav img{
     }
 }
 
+.zoomBox{
+    display: block;
+    overflow: hidden;
+}
+.zoomBox img{
+    display: block;
+    transition: transform .4s; 
+}
+.zoomBox img:hover{
+    transform: scale(1.3);
+    transform-origin: 50% 50%;
+}
+
 
